@@ -229,12 +229,130 @@
 }
 
 
-/*** Service ***/
+/* Services Styling */
 .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .06);
+    padding-top: 20px;
+    background-color: #ffffff;
+    /* White background for clarity */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    overflow: hidden;
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
+.service-item:hover {
+    transform: translateY(-10px);
+    /* Lift on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
 
+.service-icon {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    /* Primary blue background */
+    color: #ffffff;
+    /* White icon color */
+    border: 5px solid #ffffff;
+    /* White border for separation */
+}
+
+.service-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-image img {
+    transform: scale(1.1);
+    /* Zoom on hover */
+}
+
+.service-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+.service-item:hover .service-overlay {
+    opacity: 0.8;
+    /* Visible on hover */
+}
+
+.service-item h5 {
+    font-size: 1.25rem;
+    /* Slightly larger heading */
+    color: #343a40;
+    /* Dark gray for better contrast */
+}
+
+.service-item p {
+    color: #6c757d;
+    /* Muted text color */
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: #007bff;
+    /* Primary blue text on hover */
+}
+
+.partner-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.partner-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-image img {
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover .partner-image img {
+    transform: scale(1.1);
+}
+
+.partner-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.partner-item:hover .partner-overlay {
+    opacity: 1;
+}
+
+.partner-overlay .btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.partner-overlay .btn:hover {
+    background-color: #0056b3;
+    /* Darker blue */
+}
 /*** Donate ***/
 .donate {
     background: rgba(0, 29, 35, .8);
@@ -1028,54 +1146,49 @@
 }
 
 
-/*** Footer ***/
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: rgba(255,255,255,0.5);
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
+/* Footer Styling */
+.footer {
+    background-color: #060708;
 }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: rgba(255,255,255,0.5);
-    margin-right: 10px;
+.footer h2 {
+    font-size: 28px;
 }
 
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
+.footer h5 {
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-.footer .btn.btn-square {
-    color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.5);
+.footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
 }
 
-.footer .btn.btn-square:hover {
-    color: var(--secondary);
-    border-color: var(--light);
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--secondary);
-}
-
-.footer .copyright a:hover {
+.footer a:hover {
     color: var(--primary);
+    text-decoration: underline;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer .btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.footer .btn-outline-light:hover {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
 }
