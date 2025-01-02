@@ -227,6 +227,53 @@
     height: 100%;
     opacity: 1;
 }
+/* General Styling */
+.bg-light {
+    background-color: #f9f9f9 !important;
+}
+
+.text-primary {
+    color: #ff7b54 !important;
+    /* Adjusted primary color */
+}
+
+.btn-primary {
+    background-color: #ff7b54;
+    border-color: #ff7b54;
+}
+
+.btn-primary:hover {
+    background-color: #e96b47;
+    border-color: #e96b47;
+}
+
+/* Cards Styling */
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.fa-check-circle {
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .display-6 {
+        font-size: 1.75rem;
+    }
+
+    .p-4 {
+        padding: 1.25rem !important;
+    }
+}
 
 
 /* Services Styling */
